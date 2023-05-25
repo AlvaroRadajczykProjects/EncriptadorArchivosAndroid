@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/inicioFragment">
+    <fragment
+        android:id="@+id/inicioFragment"
+        android:name="com.example.encriptadorarchivos.navfragments.InicioFragment"
+        android:label="fragment_inicio"
+        tools:layout="@layout/fragment_inicio" >
+        <action
+            android:id="@+id/action_inicioFragment_to_crearModificarArchivoFragment"
+            app:destination="@id/crearModificarArchivoFragment" />
+        <action
+            android:id="@+id/action_inicioFragment_to_abrirFragment"
+            app:destination="@id/abrirFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/crearModificarArchivoFragment"
+        android:name="com.example.encriptadorarchivos.navfragments.CrearModificarArchivoFragment"
+        android:label="fragment_crear_modificar_archivo"
+        tools:layout="@layout/fragment_crear_modificar_archivo" />
+    <fragment
+        android:id="@+id/abrirFragment"
+        android:name="com.example.encriptadorarchivos.AbrirFragment"
+        android:label="fragment_abrir"
+        tools:layout="@layout/fragment_abrir" >
+        <action
+            android:id="@+id/action_abrirFragment_to_crearModificarArchivoFragment"
+            app:destination="@id/crearModificarArchivoFragment" />
+    </fragment>
+</navigation>
