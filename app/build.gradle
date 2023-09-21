@@ -47,6 +47,8 @@ android {
         exclude("META-INF/spring.handlers")
         exclude("META-INF/spring.schemas")
     }
+    ndkVersion '26.0.10792818'
+    buildToolsVersion '30.0.3'
 }
 
 dependencies {
